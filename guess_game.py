@@ -8,19 +8,25 @@ import random
 languages = ['Python', 'Java', 'C#', 'Javascript', 'Typescript', 'Golang', 'Rust', 'Lua']
 selected_language_index = random.randint(0, 7)
 print(languages[selected_language_index])
+counter = 0
 
 
 # glavni dio programa
 while True:
     user_guess = input('Pogodite naziv programskog jezika: ')
+    counter += 1
+
 
     if user_guess.lower() == languages[selected_language_index].lower():
-        print('Cestittamo!! Pogodili ste naziv programskog jezika')
-        break
+        print(f'Cestittamo!! Pogodili ste naziv programskog jezika iz {counter}. puta! ')
+        new_game = print('Zelite li novu igru ?' ('Da/Ne')):
+        if new_game == ''
+        selected_language_index = random.randint(0, 7)
+        counter = 0
+        #break
     else:
         print('Na zalost niste pogodili. Pokusajte ponovno')
-
-
+        
 
     next_round = input('Zelite li nastaviti? (Da/Ne): ')
     if next_round == 'ne':
