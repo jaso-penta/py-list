@@ -38,15 +38,20 @@ while True:
                 selected_language_index = random.randint(0, 7)
                 counter = 0
                 
+                exit_topic = False
                 while True:
                     new_game = input('Zelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
                         print('\nPovratak na selekciju tema\n')
+                        exit_topic = True
                         break
                     elif new_game == 'da'.lower():
                         break
                     else:
                         print('Error, molimo unesite da ili ne')
+                
+                if exit_topic:
+                    break
 
             
                     
@@ -57,11 +62,16 @@ while True:
                     new_game = input('Zelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
                         print('\nPovratak na selekciju tema\n')
+                        exit_topic = True
                         break
                     elif new_game == 'da'.lower():
                         break
                     else:
                         print('Error, molimo unesite da ili ne')
+
+                if exit_topic:
+                    break
+                 
 
                     
     elif selected_topic.lower() == 'filmovi'.lower():
@@ -76,15 +86,20 @@ while True:
                 selected_movies_index = random.randint(0, 7)
                 counter = 0
 
+                exit_topic = False
                 while True:
                     new_game = input('Zelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
                         print('\nPovratak na selekciju tema\n')
+                        exit_topic = True
                         break
                     elif new_game == 'da'.lower():
                         break
                     else:
                         print('Error, molimo unesite da ili ne')
+                    
+                    if exit_topic:
+                        break
 
 
 
@@ -94,12 +109,16 @@ while True:
                 while True:
                     new_game = input('Zelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower(): 
-                        print('\nPovratak na selekciju tema\n') 
+                        print('\nPovratak na selekciju tema\n')
+                        exit_topic = True 
                         break
                     elif new_game == 'da'.lower():
                         break
                     else:
                         print('Error, molimo unesite da ili ne')
+                    
+                    if exit_topic:
+                        break
 
 
     elif selected_topic.lower() == 'sport'.lower():
@@ -114,28 +133,38 @@ while True:
                 selected_football_clubs_index = random.randint(0, 7)
                 counter = 0
 
+                exit_topic = True
                 while True:
                     new_game = input('Zelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
+                        exit_topic = True
                         print('\nPovratak na selekciju tema\n')
                         break
                     elif new_game == 'da'.lower():
                         break
                     else:
                         print('Error, molimo unesite da ili ne')
+                    
+                    if exit_topic:
+                        break
             
             else:
                 print('Na zalost niste pogodili klub')
 
+                exit_topic = True
                 while True:
                     new_game = input('Zelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
                         print('\nPovratak na selekciju tema\n')
+                        exit_topic = True
                         break
                     elif new_game == 'da'.lower():
                         break
                     else:
                         print('Error, molimo unesite da ili ne')
+                    
+                    if exit_topic:
+                        break
 
 
 
