@@ -32,7 +32,7 @@ while True:
         print('\nIzabrali ste temu Programski jezici ')
         
         while True:
-            guess_language = input('Izaberite programski jezik: ')
+            guess_language = input('\nIzaberite programski jezik: ')
             counter += 1
 
             if guess_language.lower() == languages[selected_language_index].lower():
@@ -42,7 +42,7 @@ while True:
                 
 
                 while True:
-                    new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                    new_game = input('\nZelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
                         print('\nPovratak na selekciju tema\n')
                         exit_topic = True
@@ -58,10 +58,10 @@ while True:
             
                     
             else:
-                print('Na zalost niste pogodili jezik ')
+                print('\nNa zalost niste pogodili jezik ')
                 
                 while True:
-                    new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                    new_game = input('\nZelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
                         print('\nPovratak na selekciju tema\n')
                         exit_topic = True
@@ -77,10 +77,10 @@ while True:
 
                     
     elif selected_topic.lower() == 'filmovi'.lower():
-        print('Izabrali ste temu Filmovi ')
+        print('\nIzabrali ste temu Filmovi ')
 
         while True:
-            guess_movie = input('Izaberite film: ')
+            guess_movie = input('\nIzaberite film: ')
             counter += 1
 
             if guess_movie.lower() == movies[selected_movies_index].lower():
@@ -89,7 +89,7 @@ while True:
                 counter = 0
 
                 while True:
-                    new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                    new_game = input('\nZelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
                         print('\nPovratak na selekciju tema\n')
                         exit_topic = True
@@ -105,10 +105,10 @@ while True:
 
 
             else:
-                print('Na zalost niste pogodili film')
+                print('\nNa zalost niste pogodili film')
                 
                 while True:
-                    new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                    new_game = input('\nZelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower(): 
                         print('\nPovratak na selekciju tema\n')
                         exit_topic = True 
@@ -126,7 +126,7 @@ while True:
         print('Izabrali ste temu Sport ')
 
         while True:
-            guess_club = input('Izaberite engleski klub: ')
+            guess_club = input('\nIzaberite engleski klub: ')
             counter += 1
 
             if guess_club.lower() == football_clubs[selected_football_clubs_index].lower():
@@ -135,7 +135,7 @@ while True:
                 counter = 0
 
                 while True:
-                    new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                    new_game = input('\nZelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
                         exit_topic = True
                         print('\nPovratak na selekciju tema\n')
@@ -149,10 +149,10 @@ while True:
                     break
             
             else:
-                print('Na zalost niste pogodili klub')
+                print('\nNa zalost niste pogodili klub')
 
                 while True:
-                    new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                    new_game = input('\nZelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
                         print('\nPovratak na selekciju tema\n')
                         exit_topic = True
