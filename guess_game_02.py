@@ -19,7 +19,11 @@ counter = 0
 # Main dio aplikacije
 while True:
 
-    selected_topic = input('Izaberi temu: jezici, filmovi, sport: ')
+    selected_topic = input('Izaberi temu: Jezici; Filmovi; Sport ( Ili napisi exit za izlazak iz aplikacje ): ')
+
+    if selected_topic == 'exit':
+        print('\nPozdrav, do sljedecge puta !\n')
+        break
 
     
     if selected_topic.lower() == 'jezici'.lower():
@@ -34,61 +38,72 @@ while True:
                 selected_language_index = random.randint(0, 7)
                 counter = 0
 
-                new_guess = input('Zelite li novu igru ? (Da/Ne): ')
-                if new_guess == 'ne'.lower():  
+                new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                if new_game == 'ne'.lower():  
+                    print('\nPovratak na selekciju tema\n')
                     break
+
                     
             
             else:
                 print('Na zalost niste pogodili jezik ')
-                new_guess = input('Zelite li novu igru ? (Da/Ne): ')
-                if new_guess == 'ne'.lower():  
+                new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                if new_game == 'ne'.lower():  
+                    print('\nPovratak na selekciju tema\n')
                     break
+
                     
-
-
-
     elif selected_topic.lower() == 'filmovi'.lower():
         print('Izabrali ste temu Filmovi ')
-        guess_movie = input('Izaberite film: ')
-        counter += 1
 
-        if guess_movie.lower() == movies[selected_movies_index].lower():
-            print(f'Cestitamo, pogodili ste film iz {counter} pokusaja! ')
-            
-            counter = 0
-        
-        else:
-            print('Na zalost niste pogodili film')
+        while True:
+            guess_movie = input('Izaberite film: ')
+            counter += 1
+
+            if guess_movie.lower() == movies[selected_movies_index].lower():
+                print(f'Cestitamo, pogodili ste film iz {counter} pokusaja! ')
+                selected_movies_index = random.randint(0, 7)
+                counter = 0
+
+                new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                if new_game == 'ne'.lower():  
+                    print('\nPovratak na selekciju tema\n')
+                    break
+
+
+            else:
+                print('Na zalost niste pogodili film')
+                new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                if new_game == 'ne'.lower(): 
+                    print('\nPovratak na selekciju tema\n') 
+                    break
 
 
     elif selected_topic.lower() == 'sport'.lower():
         print('Izabrali ste temu Sport ')
-        guess_club = input('Izaberite engleski klub: ')
-        counter += 1
 
-        if guess_club.lower() == football_clubs[selected_football_clubs_index].lower():
-            print(f'Cestitamo, pogodili ste klub iz {counter} pokusaja! ')
+        while True:
+            guess_club = input('Izaberite engleski klub: ')
+            counter += 1
+
+            if guess_club.lower() == football_clubs[selected_football_clubs_index].lower():
+                print(f'Cestitamo, pogodili ste klub iz {counter} pokusaja! ')
+                selected_football_clubs_index = random.randint(0, 7)
+                counter = 0
+
+                new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                if new_game == 'ne'.lower():  
+                    print('\nPovratak na selekciju tema\n')
+                    break
             
-            counter = 0
-        
-        else:
-            print('Na zalost niste pogodili klub')
-
-
-    if new_guess == 'ne':
-        print('Pozdrav do sljedeceg puta')
-        break
-
-    next_round = input('Zelite li pokusati ponovno? (Da/Ne): ')
-    if next_round == 'ne':
-        break
+            else:
+                print('Na zalost niste pogodili klub')
+                new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                if new_game == 'ne'.lower():  
+                    print('\nPovratak na selekciju tema\n')
+                    break
 
 
 
 
 
-    # Zavrsetak aplikacije
-    print()
-    print('Pozdrav do sljedeceg puta! ')
-    print()
