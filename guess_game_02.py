@@ -25,6 +25,8 @@ while True:
         print('\nPozdrav, do sljedeceg puta !\n')
         break
 
+    exit_topic = False
+
     
     if selected_topic.lower() == 'jezici'.lower():
         print('\nIzabrali ste temu Programski jezici ')
@@ -38,7 +40,7 @@ while True:
                 selected_language_index = random.randint(0, 7)
                 counter = 0
                 
-                exit_topic = False
+
                 while True:
                     new_game = input('Zelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
@@ -86,7 +88,6 @@ while True:
                 selected_movies_index = random.randint(0, 7)
                 counter = 0
 
-                exit_topic = False
                 while True:
                     new_game = input('Zelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
@@ -133,7 +134,6 @@ while True:
                 selected_football_clubs_index = random.randint(0, 7)
                 counter = 0
 
-                exit_topic = True
                 while True:
                     new_game = input('Zelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
@@ -151,7 +151,6 @@ while True:
             else:
                 print('Na zalost niste pogodili klub')
 
-                exit_topic = True
                 while True:
                     new_game = input('Zelite li novu igru ? (Da/Ne): ')
                     if new_game == 'ne'.lower():  
