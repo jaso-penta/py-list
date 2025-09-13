@@ -98,8 +98,8 @@ while True:
                     else:
                         print('Error, molimo unesite da ili ne')
                     
-                    if exit_topic:
-                        break
+                if exit_topic:
+                    break
 
 
 
@@ -117,8 +117,8 @@ while True:
                     else:
                         print('Error, molimo unesite da ili ne')
                     
-                    if exit_topic:
-                        break
+                if exit_topic:
+                    break
 
 
     elif selected_topic.lower() == 'sport'.lower():
@@ -145,8 +145,8 @@ while True:
                     else:
                         print('Error, molimo unesite da ili ne')
                     
-                    if exit_topic:
-                        break
+                if exit_topic:
+                    break
             
             else:
                 print('Na zalost niste pogodili klub')
@@ -163,8 +163,8 @@ while True:
                     else:
                         print('Error, molimo unesite da ili ne')
                     
-                    if exit_topic:
-                        break
+                if exit_topic:
+                    break
 
 
 
