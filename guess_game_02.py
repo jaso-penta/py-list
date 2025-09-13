@@ -19,7 +19,7 @@ counter = 0
 # Main dio aplikacije
 while True:
 
-    selected_topic = input('Izaberi temu: Jezici; Filmovi; Sport ( Ili napisi exit za izlazak iz aplikacje ): ')
+    selected_topic = input('\nIzaberi temu: Jezici; Filmovi; Sport\n(Za izlazak iz aplikacije: exit):\n')
 
     if selected_topic == 'exit':
         print('\nPozdrav, do sljedecge puta !\n')
@@ -27,7 +27,7 @@ while True:
 
     
     if selected_topic.lower() == 'jezici'.lower():
-        print('Izabrali ste temu Programski jezici ')
+        print('\nIzabrali ste temu Programski jezici ')
         
         while True:
             guess_language = input('Izaberite programski jezik: ')
@@ -37,20 +37,31 @@ while True:
                 print(f'Cestitam, pogodili ste jezik iz {counter} puta! ')
                 selected_language_index = random.randint(0, 7)
                 counter = 0
+                
+                while True:
+                    new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                    if new_game == 'ne'.lower():  
+                        print('\nPovratak na selekciju tema\n')
+                        break
+                    elif new_game == 'da'.lower():
+                        break
+                    else:
+                        print('Error, molimo unesite da ili ne')
 
-                new_game = input('Zelite li novu igru ? (Da/Ne): ')
-                if new_game == 'ne'.lower():  
-                    print('\nPovratak na selekciju tema\n')
-                    break
-
-                    
             
+                    
             else:
                 print('Na zalost niste pogodili jezik ')
-                new_game = input('Zelite li novu igru ? (Da/Ne): ')
-                if new_game == 'ne'.lower():  
-                    print('\nPovratak na selekciju tema\n')
-                    break
+                
+                while True:
+                    new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                    if new_game == 'ne'.lower():  
+                        print('\nPovratak na selekciju tema\n')
+                        break
+                    elif new_game == 'da'.lower():
+                        break
+                    else:
+                        print('Error, molimo unesite da ili ne')
 
                     
     elif selected_topic.lower() == 'filmovi'.lower():
@@ -65,18 +76,30 @@ while True:
                 selected_movies_index = random.randint(0, 7)
                 counter = 0
 
-                new_game = input('Zelite li novu igru ? (Da/Ne): ')
-                if new_game == 'ne'.lower():  
-                    print('\nPovratak na selekciju tema\n')
-                    break
+                while True:
+                    new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                    if new_game == 'ne'.lower():  
+                        print('\nPovratak na selekciju tema\n')
+                        break
+                    elif new_game == 'da'.lower():
+                        break
+                    else:
+                        print('Error, molimo unesite da ili ne')
+
 
 
             else:
                 print('Na zalost niste pogodili film')
-                new_game = input('Zelite li novu igru ? (Da/Ne): ')
-                if new_game == 'ne'.lower(): 
-                    print('\nPovratak na selekciju tema\n') 
-                    break
+                
+                while True:
+                    new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                    if new_game == 'ne'.lower(): 
+                        print('\nPovratak na selekciju tema\n') 
+                        break
+                    elif new_game == 'da'.lower():
+                        break
+                    else:
+                        print('Error, molimo unesite da ili ne')
 
 
     elif selected_topic.lower() == 'sport'.lower():
@@ -91,17 +114,28 @@ while True:
                 selected_football_clubs_index = random.randint(0, 7)
                 counter = 0
 
-                new_game = input('Zelite li novu igru ? (Da/Ne): ')
-                if new_game == 'ne'.lower():  
-                    print('\nPovratak na selekciju tema\n')
-                    break
+                while True:
+                    new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                    if new_game == 'ne'.lower():  
+                        print('\nPovratak na selekciju tema\n')
+                        break
+                    elif new_game == 'da'.lower():
+                        break
+                    else:
+                        print('Error, molimo unesite da ili ne')
             
             else:
                 print('Na zalost niste pogodili klub')
-                new_game = input('Zelite li novu igru ? (Da/Ne): ')
-                if new_game == 'ne'.lower():  
-                    print('\nPovratak na selekciju tema\n')
-                    break
+
+                while True:
+                    new_game = input('Zelite li novu igru ? (Da/Ne): ')
+                    if new_game == 'ne'.lower():  
+                        print('\nPovratak na selekciju tema\n')
+                        break
+                    elif new_game == 'da'.lower():
+                        break
+                    else:
+                        print('Error, molimo unesite da ili ne')
 
 
 
