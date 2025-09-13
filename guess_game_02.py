@@ -22,7 +22,7 @@ while True:
     selected_topic = input('\nIzaberi temu: Jezici; Filmovi; Sport\n(Za izlazak iz aplikacije: exit):\n')
 
     if selected_topic == 'exit':
-        print('\nPozdrav, do sljedecge puta !\n')
+        print('\nPozdrav, do sljedeceg puta !\n')
         break
 
     
