@@ -37,24 +37,28 @@ while True:
         print('Nepostojeca tema, pokusajte ponovno')
         continue
 
+    
+    counter = 0
+    selected_index = random.randint(0, len(topic_list) - 1)
+
     # IGRA
     while True:
-        counter = 0
-        selected_index = random.randint(0, len(topic_list) - 1)
         print(selected_index)
         guess = input(f'\nPogodi {theme}:\n').lower()
         counter += 1
 
         if guess.lower() == topic_list[selected_index].lower():
             print(f'\nCestitmo! pogodili ste iz {counter} pokusaja')
+            counter = 0
+            
 
         else:
             print(f'\nNazalost niste pogodili {theme}')
+            
 
         while True:
             new_game = input('Zelite li novu igru? (Da/Ne)\n')
             if new_game == 'da':
-                conuter = 0
                 selected_index = random.randint(0, len(topic_list) - 1)
                 break
             elif new_game == 'ne':
@@ -63,6 +67,7 @@ while True:
             else:
                 print('\nError, molim odgovor Da ili Ne')
                 continue
+        
         if new_game == 'ne':
             break
         
