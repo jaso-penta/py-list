@@ -71,7 +71,7 @@ while True:
 
     # nova whle petlja koja obraduje jednu partiju
     while True:
-        users_guess = input('Pogodite naziv programskog jezika: ')
+        users_guess = input('Pogodite naziv trazenog pojma: ')
         counter += 1
 
         if users_guess.lower() == selected_theme[selected_theme_index].lower():
